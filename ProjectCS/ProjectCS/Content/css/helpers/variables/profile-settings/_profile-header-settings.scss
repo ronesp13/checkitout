@@ -1,0 +1,16 @@
+﻿
+//-- Profile Header Settings --//
+
+//-- Profile Header --//
+$profile-header-height: 250px;
+$profile-img-height: 150px;
+$profile-img-border: 0px;
+
+$profile-title-margin: (($profile-header-height - $profile-img-height) - ($profile-img-border * 2)) - 10px;
+
+
+//-- Profile Name --//
+$profile-name-color: white;
+$profile-name-size: 50px;
+$profile-name-margin: $profile-img-height - $profile-name-size;
+

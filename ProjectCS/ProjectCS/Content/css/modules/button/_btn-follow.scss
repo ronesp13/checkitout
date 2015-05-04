@@ -1,0 +1,7 @@
+﻿@import "../../helpers/functions/img-path";
+a.btn-follow{
+    background: img-path("follow.png");
+    display: block;
+    height: 50px;
+    text-indent: -9999px; //For hiding the text
+}

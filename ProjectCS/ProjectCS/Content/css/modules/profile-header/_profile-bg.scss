@@ -1,0 +1,10 @@
+﻿
+@import "../../helpers/variables/profile-settings/profile-header-settings";
+
+.profile-bg{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+
+    height: $profile-header-height - 2px; // compensating for border 
+}

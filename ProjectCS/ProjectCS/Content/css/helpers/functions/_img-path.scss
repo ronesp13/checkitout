@@ -1,0 +1,8 @@
+﻿@import "../variables/paths";
+
+@function img-path($image-file){
+
+    $image-file-path: $image-path + $image-file;
+
+    @return url($image-file-path);
+}

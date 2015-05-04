@@ -1,0 +1,22 @@
+﻿
+@import "../../helpers/mixins/project-card-mixin";
+
+.project-card{
+    @include project-card;
+}
+
+.project-card-big{
+    @include project-card;
+}
+
+.project-card-small{
+    @include project-card;
+}
+
+.project-card-list{
+    padding: 20px 10px 20px 10px;
+    .project-card-list-box{
+        margin: 10px 0 10px 0;
+        padding: 0 5px 0 5px;
+    }
+}

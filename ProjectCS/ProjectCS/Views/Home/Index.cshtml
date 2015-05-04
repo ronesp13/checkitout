@@ -1,0 +1,19 @@
+﻿@Scripts.Render("~/bundles/facebook")
+@{
+    ViewBag.Title = "Hjem";
+    ViewBag.PageBanner = "welcome-banner.png";
+    ViewBag.TitleLine = "Velkommen til ProsjektCS";
+}
+@Html.Partial("_PageBanner")
+<div class="box col-xs-12">
+    @Html.Partial("_TitleLine")
+    <p class="lead">Head over to facebook to check out the student developers.</p>
+    <p><a href="https://www.facebook.com/groups/536546613144309/?fref=ts" class="btn btn-primary btn-lg">Developers &raquo;</a>
+    </p>
+
+    <div class="fb-like"
+         data-share="true"
+         data-width="450"
+         data-show-faces="true">
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿<div class="navbar navbar-default navbar-gyldendal navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("ProjectCS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Hjem", "Index", "Home")</li>
+                <li>@Html.ActionLink("Om", "About", "Home")</li>
+                <li>@Html.ActionLink("Kontakt oss", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Prosjekter", "Index", "Projects")</li>
+            </ul>
+            <div class="navbar-left navbar-form">
+                <input id="search" name="search" type="text" class="form-control" placeholder="Søk..">
+            </div>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>

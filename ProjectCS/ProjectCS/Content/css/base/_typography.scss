@@ -1,0 +1,27 @@
+﻿@import "../helpers/variables/colors";
+.inverted-txt{
+    float: left;
+    padding: 4px;
+    margin: 20px 0 0 0;
+
+    background-color: rgba(40,40,40, 0.9) !important;
+    color: white !important;
+}
+
+.inverted-txt-pink{
+    float: left;
+    padding: 4px;
+    margin: 20px 0 0 0;
+    
+    background-color: #EC1550 !important;
+    color: white !important;
+}
+
+.inverted-txt-gray{
+    float: left;
+    padding: 4px;
+    margin: 20px 0 0 0;
+    
+    background-color: $gray-light !important;
+    color: white !important;
+}

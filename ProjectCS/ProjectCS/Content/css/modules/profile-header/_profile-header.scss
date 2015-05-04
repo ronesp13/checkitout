@@ -1,0 +1,21 @@
+﻿
+@import "../../helpers/variables/profile-settings/profile-header-settings";
+
+
+.profile-header{
+    margin: 0;
+    padding: 0;
+    height: $profile-header-height;
+
+    background-color: palevioletred; //For Debug
+
+    .profile-title{
+        margin-top: $profile-title-margin;
+    }
+
+    h1{
+        font-size: $profile-name-size;
+        margin-top: $profile-name-margin;
+        color: $profile-name-color;
+    }
+}

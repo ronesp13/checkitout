@@ -1,0 +1,41 @@
+﻿@import "../../helpers/variables/colors";
+
+.title-box{
+    width: auto;
+    overflow: hidden;
+    padding: 5px;
+    margin-bottom: 5px;
+    
+    background-color: rgba(20,20,20, 0.8);
+    color: white;
+
+    h1, h2{
+        margin: 0;
+    }
+
+    h1{
+        text-align: center;
+    }
+}
+
+.title-line-pink{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: solid 1px $gyldendal-pink;
+    margin-bottom: 20px;
+}
+
+
+.title-line{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: solid 1px $gray-darker;
+    margin-bottom: 20px;
+}
+
+.title-line-gray{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: solid 1px $gray-light;
+    margin-bottom: 20px;
+}

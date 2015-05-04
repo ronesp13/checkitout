@@ -1,0 +1,14 @@
+﻿@import "../../helpers/variables/colors";
+
+.navbar-gyldendal{
+    background-color: $gyldendal-bg-light;
+
+    li:active{
+        background-color: $gyldendal-pink;
+
+        a{
+            color: white !important;
+        }
+        
+    }
+}

@@ -1,0 +1,59 @@
+﻿@using ProjectCS.Models
+@model IEnumerable<Project>
+
+@{
+    ViewBag.Title = "Projekt Oversikt";
+    ViewBag.PageBanner = "project-banner.png";
+    ViewBag.TitleLine = "Prosjekt oversikt";
+}
+
+@Html.Partial("_PageBanner")
+<div class="box gray-bg nopadding col-xs-12">
+    @Html.Partial("_TitleLine")
+    <div class="box col-xs-12 sorting-box">
+        <h4 class="inverted-txt">
+            Sorter på:
+        </h4>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+               <span class="search-criteria">Tittel</span>&nbsp;<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li role="presentation"><a id="title-search" data-href="@Url.Action("Search")" data-search-val="0">Tittel</a></li>
+                <li role="presentation"><a id="likes-search" data-href="@Url.Action("Search")" data-search-val="1">Likes</a></li>
+                <li role="presentation"><a id="follower-search" data-href="@Url.Action("Search")" data-search-val="2">Følgere</a></li>
+                <li role="presentation"><a id="created-at-search" data-href="@Url.Action("Search")" data-search-val="3">Publiseringsdato</a></li>
+                <li role="presentation"><a id="contributor-search" data-href="@Url.Action("Search")" data-search-val="4">Antall bidragsytere</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="project-card-list box col-xs-12">
+        @foreach (var item in Model)
+        {
+            <div class="project-card-list-box col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="project-card box col-xs-12 nopadding">
+                    <img src="~/Data/Projects/@item.Id/cover/cover.png" alt="Project banner" class="col-xs-12 nopadding" width="1200" height="300"/>
+                    <div class="icon-box row">
+                        <div class="col-xs-6 nopadding">
+                            <img src="~/Content/images/user.png" alt="Something"/>
+                            <label class="col-xs-12 nopadding">@item.Followers.Count</label>
+                        </div>
+                        <div class="col-sm-6 col-xs-6 nopadding">
+                            <img src="~/Content/images/hearts.png" alt="Something"/>
+                            <label class="col-xs-12 nopadding">@item.Likes.Count</label>
+                        </div>
+                    </div>
+                    <div class="follow">
+                        <img src="~/Content/images/follow.png" alt="Something"/>
+                    </div>
+                    <div class="trans-bg-box col-xs-12">
+                        <h1>@Html.ActionLink(item.Title, "Details", "Projects", new {id = item.Id}, null)</h1>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@Scripts.Render("~/bundles/ajax")
+@Scripts.Render("~/bundles/animate")
+<script src="~/Scripts/projects/projects.js"></script>

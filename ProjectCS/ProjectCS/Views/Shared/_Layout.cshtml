@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title - ProjectCS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+<body class="@ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString().ToLower()">
+    @Html.Partial("_Header")
+    <div class="navbar-margin"></div>
+    <div class="dark-top-page-bg"></div>
+    <div class="container body-content">
+        @RenderBody()
+        @Html.Partial("_Footer")
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

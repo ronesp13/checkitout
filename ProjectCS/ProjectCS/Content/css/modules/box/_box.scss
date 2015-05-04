@@ -1,0 +1,12 @@
+﻿
+
+@import "../../helpers/variables/colors";
+
+.box{
+    margin-bottom: 10px;
+    padding: 10px 20px;
+
+    background-color: $box-bg-light;
+    //border: solid 1px $box-border-light;
+    //box-shadow: 0 0 6px $gray;
+}

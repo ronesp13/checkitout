@@ -1,0 +1,12 @@
+﻿
+@import "../../helpers/variables/profile-settings/profile-header-settings";
+
+.profile-img{
+    height: $profile-img-height;
+    width: $profile-img-height;
+}
+
+.profile-img-bg{
+    padding: $profile-img-border;
+    //background-color: white;
+}

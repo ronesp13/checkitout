@@ -1,0 +1,132 @@
+﻿@using ProjectCS.Models
+@{
+    var currentUser = (ApplicationUser)ViewData["current_user"];
+    ViewBag.Title = currentUser.FullName;
+}
+<div style="margin-top: 50px;">
+    <div class="col-xs-12 profile-header">
+        <img class="profile-bg col-xs-12" src="@currentUser.BackgroundUrl" alt="personal-background" />
+        <div class="profile-title col-xs-12">
+            <div class="col-xs-2 profile-img-bg">
+                <img class="profile-img" src="@currentUser.AvatarUrl" alt="personal-image" />
+            </div>
+            <div class="col-xs-10 nopadding">
+                <h1 class="inverted-txt">@currentUser.FullName</h1>
+            </div>
+        </div>
+    </div>
+    <div id="main-box" class="col-xs-12">
+        <div class="col-xs-12 col-md-2 bg-light">
+            <div class="about-box box col-xs-12">
+                <div class="title-line">
+                    <h2 class="inverted-txt">Om</h2>
+                </div>
+                <div>@currentUser.Description</div>
+                <div class="factBox">
+                    <dl>
+                        <dt>Bosted:</dt>
+                        <dd>@currentUser.Location</dd>
+                        <dt>Fødselsdag:</dt>
+                        <dd>@currentUser.GetDateOfBirth()</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="activity-box box col-xs-12">
+                <div class="title-line">
+                    <h2 class="inverted-txt">Aktivitet</h2>
+                </div>
+                <div class="activityMonitor">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-10 nopadding">
+            <div class="news-feed box col-xs-12">
+                <div class="title-line-pink">
+                    <h2 class="inverted-txt-pink">Vegg</h2>
+                </div>
+            </div>
+            <div id="feed-box" class="nopadding col-xs-12">
+                <div class="feed-box  box col-xs-12">
+                    <div class="title-line-gray">
+                        <h3 class="inverted-txt-gray"><b>@currentUser.FirstName</b> ble akkurat med på <b>dette</b> prosjektet!</h3>
+                    </div>
+                    <div class="project-card box project-card box col-lg-12 col-md-12 col-sm-12 col-xs-12 nopadding">
+                        <img src="~/Content/images/jungel_eventyr.png" alt="Project banner" class="col-xs-12 nopadding" width="1200" height="300" />
+                        <div class="icon-box row">
+                            <div class="col-xs-6 nopadding">
+                                <img src="~/Content/images/user.png" alt="Collaborators-icon" />
+                                <label class="col-xs-12 nopadding">2</label>
+                            </div>
+                            <div class="col-sm-6 col-xs-6 nopadding">
+                                <img src="~/Content/images/hearts.png" alt="Likes-icon" />
+                                <label class="col-xs-12 nopadding">6</label>
+                            </div>
+                        </div>
+                        <div class="follow">
+                            <img src="~/Content/images/follow.png" alt="Follow-icon" />
+                        </div>
+                        <div class="trans-bg-box col-xs-12">
+                            <h1>Jungelpatruljen</h1>
+                        </div>
+                    </div>
+                    <p>Dette er en post!</p>
+                </div>
+            </div>
+            <div class="award-box box col-xs-12">
+                <div class="title-line-pink">
+                    <h2 class="inverted-txt-pink">Medaljer</h2>
+                </div>
+                <div class="medal col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <img src="~/Content/images/medal.png" alt="Picture of a medal" />
+                    <div class="medal-number">
+                        <h1>2</h1>
+                    </div>
+                    <div>
+                        <label class="medal-title">Collaborator!</label>
+                    </div>
+                </div>
+                <div class="medal col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <img src="~/Content/images/medal.png" alt="Picture of a medal" />
+                    <div class="medal-number">
+                        <h1>2</h1>
+                    </div>
+                    <div>
+                        <label class="medal-title">Illustrator!</label>
+                    </div>
+                </div>
+                <div class="medal col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <img src="~/Content/images/medal.png" alt="Picture of a medal" />
+                    <div class="medal-number">
+                        <h1>2</h1>
+                    </div>
+                    <div>
+                        <label class="medal-title">Pro Writer!</label>
+                    </div>
+                </div>
+                <div class="medal col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <img src="~/Content/images/medal.png" alt="Picture of a medal" />
+                    <div class="medal-number">
+                        <h1>2</h1>
+                    </div>
+                    <div>
+                        <label class="medal-title">Translator!</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="overviewBox" class="col-xs-12 box">
+            <nav>
+                <a href="#">Mine prosjekter</a>
+                <a href="#">Følger</a>
+                <a href="#">Organisasjoner</a>
+            </nav>
+            <div id="myProjectsBox">
+            </div>
+            <div id="following">
+            </div>
+            <div id="organizations">
+            </div>
+        </div>
+    </div>
+</div>

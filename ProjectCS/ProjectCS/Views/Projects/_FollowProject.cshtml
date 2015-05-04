@@ -1,0 +1,8 @@
+﻿@model dynamic
+<h1>@Model.project.Title</h1>
+
+<div class="follow-project-wrapper">
+    <a id="follow-link" data-href="@Url.Action("Follow", "Projects", new {id = @Model.project.Id})">Følg prosjektet</a>
+    @Html.AntiForgeryToken()
+</div>
+<script src="~/Scripts/projects/projects.js"></script>

@@ -1,0 +1,33 @@
+﻿
+//Variables
+@import "../helpers/variables/colors";
+@import "../helpers/variables/paths";
+@import "../helpers/functions/img-path";
+@import "../helpers/variables/profile-settings/profile-header-settings"; //For profile-header-height
+
+.background-gyldendal{
+    background-color: $gyldendal-bg-light;
+
+    background-image: img-path('gyldendalTreetOP25.png');
+    background-size: 50px;
+}
+
+.dark-top-page-bg{
+    margin-top: 50px;
+    position: absolute;
+    width: 100%;
+    height: $profile-header-height;
+
+    background-color: $gray-darker;
+    box-shadow: 0 0 20px black inset;
+    border-bottom: solid 2px $gyldendal-pink;
+}
+
+.gray-bg{
+    background-color: rgba(240,240,240, 0.6) !important;
+    //box-shadow: 0 0 10px $gray;
+}
+
+.bg-light{
+    background-color: rgba(255,255,255, 0.3);
+}
